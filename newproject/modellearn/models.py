@@ -9,7 +9,7 @@ class Person(AbstractUser):
 
     age = models.IntegerField()
 
-    mobile = models.CharField(max_length=9,unique=True)
+    mobile = models.CharField(max_length=15,unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     gender = models.BooleanField(blank=True, null=True)
@@ -24,7 +24,7 @@ class Person(AbstractUser):
         ordering = ['created_at']# this creates
         verbose_name = 'Human'
         verbose_name_plural = 'Humans'
-        # unique_together = ('firstname', 'lastname')
+        # unique_together = ('firstname', 'lastname'♦
 class Student(Person):
      # person = models.OneToOneField(Person,models.CASCADE)
      iq = models.PositiveIntegerField(blank=True,null=True)

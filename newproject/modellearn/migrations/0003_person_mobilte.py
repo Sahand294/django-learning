@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='person',
             name='mobilte',
-            field=models.CharField(default='7098536011', max_length=9, unique=True),
+            field=models.CharField(default='7098536011', max_length=15, unique=True),
             preserve_default=False,
         ),
     ]
