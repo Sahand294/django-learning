@@ -9,6 +9,7 @@ def main_page(request):
         {'id':3,'name':'Xiaoni 17','price':1000,'quantity':100,'discount':'30 % '},
 
     ]
+    print('=========================================')
     if request.method == "POST":
         name = request.POST.get('name')
         return render(request,"index.html",{'products':product,'name':name})
